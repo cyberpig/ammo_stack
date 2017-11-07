@@ -1,8 +1,8 @@
-# this is a D&D dice rolling program still in R&D
+# This is a roll the dice program but it's a D&D dice base. It works but still can be be improved. 
 import random
 a = True
-print("1. again")
-print("2. quit")
+print("1. Roll The Dice")
+print("2. Quit")
 chs = input("choose: ")
 
 
@@ -29,7 +29,7 @@ if chs == "1":
     print(num_c3)
     print("")
 
-    print("D10-%: int: total: ", end = '')
+    # D-10 dice
     e = [00, 10, 20, 30, 40, 50, 60, 70, 80, 90]
     f = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
     num_d1 = random.choice(e)
@@ -37,11 +37,21 @@ if chs == "1":
     num_d3 = num_d1
     num_d4 = num_d2
     num_d5 = num_d3 + num_d4
-    print(num_d3, num_d4, num_d5)
+    print("D10 %:", num_d3, "int:", num_d4, "total:", num_d5)
     
     print("")
-    print("D12: ")
-    print("d20: ")
+    print("D12: ", end = '')
+    num_e1 = 1
+    num_e2 = 13
+    num_e3 = random.randrange(num_e1, num_e2)
+    print(num_e3)
+    print("")
+
+    print("D20: ", end = '')
+    num_f1 = 1
+    num_f2 = 21
+    num_f3 = random.randrange(num_f1, num_f2)
+    print(num_f3)
  
 if chs == "2":
     print("seeya sweetcheeks")
